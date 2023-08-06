@@ -1,0 +1,122 @@
+body {
+  display: grid;
+  min-height: 100vh;
+  margin: 0;
+  grid-template-rows: auto 1fr auto;
+  line-height: 1.4rem;
+}
+
+/* header */
+.headergrid,
+.homegrid {
+  display: grid;
+  gap: 2rem;
+  margin: 1rem 4vw;
+}
+
+.headergrid {
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  align-items: center;
+}
+
+header a,
+.card a {
+  text-decoration: none;
+}
+
+ul.inline {
+  padding: 0;
+  margin: 0;
+}
+
+nav ul.inline {
+  text-align: right;
+}
+
+.inline li {
+  display: inline-block;
+  padding-left: 0.5rem;
+}
+
+/* single grid */
+.singlegrid {
+  display: grid;
+}
+
+.box {
+  padding: 0 4vw;
+}
+
+.article {
+  min-width: 0%;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border-radius: 0.4rem;
+  padding: 0.6rem;
+  margin-left: 0.4rem;
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.meta h2 {
+  line-height: 2rem;
+  margin-bottom: 0;
+}
+
+.meta h5 {
+  margin-top: 0.2rem;
+}
+
+/* footer */
+footer {
+  display: block;
+  padding: 1rem 4vw;
+}
+
+/* table */
+table {
+  border-collapse: collapse;
+  min-width: 50vw;
+  margin: 0.4rem;
+}
+td,
+th {
+  padding: 1rem;
+}
+
+/* blockquote */
+blockquote {
+  margin-left: 1rem;
+  border-left-width: 0.5rem;
+  border-left-style: solid;
+  padding-left: 10px;
+}
+
+dt {
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+@media screen and (min-width: 50rem) {
+  .homegrid {
+    grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+  }
+}
+
+@media screen and (min-width: 70rem) {
+  .homegrid {
+    grid-template-columns: repeat(auto-fit, minmax(28vw, 1fr));
+  }
+  .singlegrid {
+    grid-template-columns: auto 1fr;
+  }
+  .meta {
+    grid-column: 1 / -1;
+  }
+}

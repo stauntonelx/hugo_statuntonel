@@ -1,0 +1,9 @@
+{{ define "main" }}
+  <div class="singlegrid">
+    {{ partial "meta.html" . }}
+    {{ partial "aside.html" . }}
+    <div class="box article">
+      {{ .Content}}
+    </div>
+  </div>
+{{ end }}

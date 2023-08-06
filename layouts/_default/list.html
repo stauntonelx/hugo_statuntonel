@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="homegrid">
+  {{ $pages := .Pages.ByDate.Reverse }} {{ range (where $pages "Section" "!=" "") }}
+  <div class="card">
+    <!-- this <div> includes the title summary -->
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+    {{ .Summary }}
+  </div>
+  {{ end }}
+</div>
+{{ end }}

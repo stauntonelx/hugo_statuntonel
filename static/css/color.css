@@ -1,0 +1,51 @@
+:root {
+  --clr-primary--300: 0, 0%, 92%;
+  --clr-primary--500: 199, 98%, 35%;
+  --clr-primary--700: 199, 98%, 26%;
+}
+
+body {
+  background-color: hsl(0, 0%, 96%);
+}
+pre {
+  background-color: hsl(0, 0%, 92%);
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.2);
+}
+
+header, footer, th {
+  background-color: hsl(var(--clr-primary--700));
+}
+
+header a, footer, footer a, .meta {
+  color: white;
+  font-weight: 600;
+}
+
+.card {
+  box-shadow: 10px 10px 20px hsla(0, 0%, 0%, 0.2);
+}
+
+/* table */
+td, th {
+  border: 1px solid black;
+}
+
+th {
+  color: white;
+}
+
+.card, aside, tr:nth-child(even) {
+  background-color: hsl(var(--clr-primary--300));
+}
+
+.meta {
+  background-color: hsl(var(--clr-primary--500));
+}
+
+blockquote {
+  border-color: hsl(var(--clr-primary--500));
+}
+
+dt {
+  color: hsl(var(--clr-primary--700));
+}

@@ -1,0 +1,4 @@
+<div class="box meta">
+  <h2>{{ .Title | markdownify }}</h2>
+  {{ if (gt .Params.lastmod 0) }}<h5 class="date">Laatst gewijzigd: {{ .Lastmod.Format "02-01-2006" }}</h5>{{ end }}
+</div>

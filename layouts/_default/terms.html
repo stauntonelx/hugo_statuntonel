@@ -1,0 +1,9 @@
+{{ define "main" }}
+  <div class="homegrid">
+    {{ range .Data.Terms }}
+    <div class="card">
+      <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }})
+    </div>
+    {{ end }}
+  </div>
+{{ end }}

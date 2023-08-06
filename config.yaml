@@ -1,0 +1,29 @@
+baseURL: https://stauntonel.nl/
+languageCode: nl-nl
+title: Stauntonel Blog
+
+enableGitInfo: true
+
+permalinks:
+  notes: /notes/:slug
+  posts: /posts/:year/:slug/
+
+params:
+  author: Stauntonel
+  description: verzameling van korte aantekeningen meestal linux gerelateerd
+  footer: "&copy; Stauntonel 2022 | [HUGO](https://gohugo.io/documentation) | [XMIN](https://github.com/yihui/hugo-xmin)"
+
+menu:
+  main:
+    - name: Categorie
+      url: categories/
+      weight: 20
+    - name: Tags
+      url: tags/
+      weight: 30
+    - name: Notitie
+      url: notes/
+      weight: 40
+    - name: Archief
+      url: posts/
+      weight: 50

@@ -1,0 +1,27 @@
+<aside class="box">
+    {{ partial "toc.html" . }}
+ 
+{{ if .Params.tags }}
+  <p><strong>tags:</strong></p>
+  <ul class="inline">
+    {{ with .Params.tags }}
+    {{ range . }}
+    {{ $href := print (absURL "tags/") (urlize .) }}
+      <li><a href="{{ $href }}">{{ . }}</a></li>
+    {{ end }}
+    {{ end }}
+  </ul>
+{{ end }}
+
+{{ if .Params.categories }}
+  <p><strong>categorie:</strong></p>
+  <ul class="inline">
+    {{ with .Params.categories }}
+    {{ range . }}
+    {{ $href := print (absURL "categories/") (urlize .) }}
+      <li><a href="{{ $href }}">{{ . }}</a></li>
+    {{ end }}
+    {{ end }}
+  </ul>
+{{ end }}
+</aside>
