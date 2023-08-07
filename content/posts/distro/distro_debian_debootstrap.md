@@ -1,7 +1,7 @@
 ---
 weight: 100
 title: "Debootstrap Installeer Debian"
-date: "2022-06-30"
+date: "2023-08-06"
 author:
 draft: false
 description: "Hoe installeer je Debian met behulp van debootstrap"

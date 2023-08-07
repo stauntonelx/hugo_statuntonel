@@ -1,4 +1,5 @@
 ---
+weight: 103
 title: "B. Hugo hello world"
 date: 2022-10-11T22:49:34+02:00
 draft: true

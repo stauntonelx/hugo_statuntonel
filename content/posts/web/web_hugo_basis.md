@@ -1,4 +1,5 @@
 ---
+weight: 102
 title: A. Hugo basis
 date: 2022-10-09T11:19:30+02:00
 draft: false
