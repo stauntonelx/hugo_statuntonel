@@ -1,6 +1,6 @@
 ---
 title: Beheer schijven
-date: 2021-10-10T12:51:47+02:00
+date: 2023-08-07T12:51:47+02:00
 draft: false
 description: formatteren, versleutelen en veilig verwijderen data
 categories:
