@@ -7,8 +7,9 @@ description: formatteren, versleutelen en veilig verwijderen data
 categories:
   - beheer
 tags:
-  - schijven
+  - versleutelen
   - beveiliging
+  - bootloader
 slug:
   - beheer-schijven-
 toc: true
@@ -138,7 +139,7 @@ De btrfs partitie kun je mounten en daarna subvolumes aanmaken met
     sudo mount -o /dev/mapper/btrfs /mnt
     sudo btrfs subvolume create @
 
-## 05 auto mount encrypted partitie
+## 05 boot van versleutelde partitie
 
 Bepaal eerst de UUID van /dev/sdb3, de partitie die het versleutelde block device bevat.
 

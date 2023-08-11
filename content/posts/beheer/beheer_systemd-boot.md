@@ -66,7 +66,7 @@ Het kan soms nodig zijn om de vfat module te downloaden
 
     nano /etc/modules-load.d/vfat
 
-geef het bestan de volgende inhoud:
+geef het bestand de volgende inhoud:
 
     vfat
 

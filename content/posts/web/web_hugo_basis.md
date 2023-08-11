@@ -1,6 +1,6 @@
 ---
-weight: 102
-title: A. Hugo basis
+weight: 110
+title: A. Hugo Hello world
 date: 2022-10-09T11:19:30+02:00
 draft: false
 description: Basis voor een nieuwe website.
@@ -8,9 +8,8 @@ categories:
   - web
 tags:
   - hugo
-  - basis
 slug:
-  - hugo-basis
+  - hugo-a-basis
 toc: true
 ---
 
@@ -104,6 +103,7 @@ Omdat we niet met een thema willen werken maar wel de basis van een thema willen
 
     mv themes/MijnThema/layouts .
     mv themes/MijnThema/static .
+    mv layouts/index.html layouts/_default/home.html
     rm -rf {themes,resources,data}
 
 Let op! dat je in de hoofdmap van je website staat. (ontwikkel01)
@@ -117,9 +117,9 @@ Je mappenstructuur ziet er nu als vogt uit:
     │   ├── 404.html
     │   ├── _default
     │   │   ├── baseof.html
+    │   │   ├── home.html
     │   │   ├── list.html
     │   │   └── single.html
-    │   ├── index.html
     │   └── partials
     │       ├── footer.html
     │       ├── header.html
@@ -128,17 +128,15 @@ Je mappenstructuur ziet er nu als vogt uit:
         ├── css
         └── js
 
-## 02 templates
+## 02 basis templates
 
-### basis overzicht
-
-Hieronder een overzicht van de meest belangrijke templates.
+Onderstaande templates vormen het geraamte van onze website
 
 baseof.html
 : Het geraamte van de website
 
-index.html
-: landingspagina voor de website
+home.html
+: homepage voor de website
 
 ## 03 baseof.html
 
@@ -185,9 +183,9 @@ Voor nu geven we de aangeroepen partials een minimale vulling om te zien hoe HUG
         <p>footer</p>
     </footer>
 
-## 04 index.html
+## 04 home.html
 
-Iedere website heeft een landingspagina nodig, de zogenaamde *index.html*
+Iedere website heeft een landingspagina nodig, de zogenaamde *homepage*
 
     {{ define "main" }}
         <h1>Hello world</h1>
@@ -202,4 +200,4 @@ Je kunt deze oproepen met:
 
     hugo server
 
-Daarna kun je de pagina oproepen in de browser met **localhost:1313**
+Daarna kun je de pagina oproepen in de browser met: [http://localhost:1313](http://localhost:1313)

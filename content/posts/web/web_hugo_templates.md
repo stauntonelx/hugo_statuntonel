@@ -1,6 +1,6 @@
 ---
-weight: 103
-title: "B. Hugo hello world"
+weight: 111
+title: "B. Hugo templates"
 date: 2022-10-11T22:49:34+02:00
 draft: true
 description: rondje langs diverse templates van je hugo website.
@@ -8,9 +8,8 @@ categories:
   - web
 tags:
   - hugo
-  - templates
 slug:
-  - hugo-templates
+  - hugo-b-templates
 toc: true
 ---
 
