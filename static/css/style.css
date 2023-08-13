@@ -6,6 +6,12 @@ body {
   line-height: 1.4rem;
 }
 
+
+header {
+  position: sticky;
+  top: 0;
+}
+
 /* header */
 .headergrid,
 .homegrid {
