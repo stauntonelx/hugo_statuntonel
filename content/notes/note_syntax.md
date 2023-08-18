@@ -92,7 +92,7 @@ These elements extend the basic syntax by adding additional features. Not all Ma
 
 ### Fenced Code Block
 
-```
+```bash
 {
   "firstName": "John",
   "lastName": "Smith",

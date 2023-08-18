@@ -77,15 +77,17 @@ Omdat het menu van openbox niet echt dynamisch is, installeren we ook Dmenu
 
 daarna een keybinding aanmaken
 
-    <keybind key="W-r">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>dmenu</name>
-        </startupnotify>
-        <command>dmenu_run</command>
-      </action>
-    </keybind>
+```xml
+<keybind key="W-r">
+  <action name="Execute">
+    <startupnotify>
+      <enabled>true</enabled>
+      <name>dmenu</name>
+    </startupnotify>
+    <command>dmenu_run</command>
+  </action>
+</keybind>
+```
 
 Nu kun je met de window -R elk geinstalleerd programma openen.
 
@@ -93,51 +95,53 @@ Nu kun je met de window -R elk geinstalleerd programma openen.
 
 Pas het openbox menu aan, hier een simpel voorbeeld:
 
-    <openbox_menu xmlns="http://openbox.org/3.4/menu">
-        <menu id="system-menu" label="System">
-            <item label="Openbox menu">
-                <action name="Execute">
-                    <execute>obmenu</execute>
-                </action>
-            </item>
-            <item label="Openbox Configuration Manager">
-                <action name="Execute">
-                    <command>obconf</command>
-                    <startupnotify>
-                        <enabled>yes</enabled>
-                    </startupnotify>
-                </action>
-            </item>
-            <separator/>
-            <item label="Reconfigure Openbox">
-                <action name="Reconfigure"/>
-            </item>
-        </menu>
-        <menu id="root-menu" label="Openbox 3">
-            <item label="Terminal">
-                <action name="Execute">
-                    <execute>termite</execute>
-                </action>
-            </item>
-            <item label="Firefox">
-                <action name="Execute">
-                    <execute>firefox</execute>
-                </action>
-            </item>
-            <menu id="system-menu"/>
-            <separator/>
-            <item label="Exit">
-                <action name="Execute">
-                    <execute>systemctl poweroff</execute>
-                </action>
-            </item>
-            <item label="Log Out">
-                <action name="Exit">
-                    <prompt>yes</prompt>
-                </action>
-            </item>
-        </menu>
-    </openbox_menu>
+```xml
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+    <menu id="system-menu" label="System">
+        <item label="Openbox menu">
+            <action name="Execute">
+                <execute>obmenu</execute>
+            </action>
+        </item>
+        <item label="Openbox Configuration Manager">
+            <action name="Execute">
+                <command>obconf</command>
+                <startupnotify>
+                    <enabled>yes</enabled>
+                </startupnotify>
+            </action>
+        </item>
+        <separator/>
+        <item label="Reconfigure Openbox">
+            <action name="Reconfigure"/>
+        </item>
+    </menu>
+    <menu id="root-menu" label="Openbox 3">
+        <item label="Terminal">
+            <action name="Execute">
+                <execute>termite</execute>
+            </action>
+        </item>
+        <item label="Firefox">
+            <action name="Execute">
+                <execute>firefox</execute>
+            </action>
+        </item>
+        <menu id="system-menu"/>
+        <separator/>
+        <item label="Exit">
+            <action name="Execute">
+                <execute>systemctl poweroff</execute>
+            </action>
+        </item>
+        <item label="Log Out">
+            <action name="Exit">
+                <prompt>yes</prompt>
+            </action>
+        </item>
+    </menu>
+</openbox_menu>
+```
 
 ### OBmenu
 
@@ -176,30 +180,32 @@ Met deze settings los je problemen op met gtk3.
 
 Zorg dat dit bestand er alsvolgt uitziet:
 
-    .window-frame, .window-frame:backdrop {
-     box-shadow: 0 0 0 black;
-     border-style: none;
-     margin: 0;
-     border-radius: 0;
-    }
+```css
+.window-frame, .window-frame:backdrop {
+ box-shadow: 0 0 0 black;
+ border-style: none;
+ margin: 0;
+ border-radius: 0;
+}
 
-    .titlebar {
-     border-radius: 0;
-    }
+.titlebar {
+ border-radius: 0;
+}
 
-    .window-frame.csd.popup {
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
-    }
+.window-frame.csd.popup {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
+}
 
-    .header-bar {
-      background-image: none;
-      background-color: #ededed;
-      box-shadow: none;
-    }
-    /* You may want to use this if you don't like the double title.
-    GtkLabel.title {
-        opacity: 0;
-    }*/
+.header-bar {
+  background-image: none;
+  background-color: #ededed;
+  box-shadow: none;
+}
+/* You may want to use this if you don't like the double title.
+GtkLabel.title {
+    opacity: 0;
+}*/ 
+```
 
 Verder zorg je ervoor dat er geen buttons in de header komen met:
 
