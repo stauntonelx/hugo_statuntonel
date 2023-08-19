@@ -1,5 +1,4 @@
 baseURL: https://stauntonel.nl/
-languageCode: nl-nl
 title: Stauntonel Blog
 
 enableGitInfo: true
@@ -11,7 +10,7 @@ permalinks:
 params:
   author: Stauntonel
   description: verzameling van korte aantekeningen meestal linux gerelateerd
-  footer: "&copy; Stauntonel 2022 | [HUGO](https://gohugo.io/documentation) | [XMIN](https://github.com/yihui/hugo-xmin)"
+  footer: "&copy; Stauntonel 2023 | [HUGO](https://gohugo.io/documentation) | [XMIN](https://github.com/yihui/hugo-xmin)"
 
 menu:
   main:
